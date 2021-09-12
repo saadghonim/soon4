@@ -90,7 +90,7 @@ body{
 .item {
   text-align: center;
   padding:0 30px;
-  color: #ffffff;
+  color: #3f3f3f;
   width: 145px;
 }
 
@@ -102,8 +102,8 @@ body{
 
 .counter {
   font-family: "Tajawal";
-  font-weight: 600;
-  font-size: 30px;
+  font-weight: 500;
+  font-size: 20px;
   
 }
 
@@ -139,31 +139,62 @@ body{
 .text-anim h1{
   margin: 0;
   text-align:center;
-  font-size:70px;
+  font-size:35px;
   line-height:70px;
-  color:white;
-  letter-spacing:5px;
+  color:#4a4a4a;
   text-transform:uppercase;
   font-family:"Tajawal";
   font-weight: 500;
-  text-shadow:0 1px 0 #efefef,
-              0 2px 0 #efefef,
-              0 3px 0 #efefef,
-              0 4px 0 #efefef,
-              0 20px 5px rgba(0,0,0,.1);
-  animation:animation linear 1s infinite alternate;
-}
-@keyframes animation{
-  0%{
-    transform:rotate(5deg);
-  }
-  100%{
-    transform:rotate(-5deg);
-  }
+  margin-bottom: 100px;
 }
 
-@media(max-width:767px){
-  .text-anim h1{
-    font-size: 35px;
-  }
+
+@import url(https://fonts.googleapis.com/css?family=Tangerine);
+body{
+  width:100%; 
+  margin:0;
+  overflow:hidden;
+}
+
+.sm{
+  text-align: center;
+}
+
+.sm a{
+  display: inline-block;
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: #4a4a4a;
+  margin: 0 ;
+  transition: .4s linear;
+  position: relative;
+}
+
+.sm a::before, .sm a::after{
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  width: 95%;
+  height: 67%;
+  left: 0;
+  top: 0;
+  transition: .4s linear;
+}
+
+.sm a:hover{
+  transform: scale(.8);
+}
+
+.sm a:hover::before{
+  border-left: 4px solid;
+  border-right: 4px solid;
+  transform: skewX(20deg);
+}
+
+.sm a:hover::after{
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+  transform: skewY(-20deg);
 }
