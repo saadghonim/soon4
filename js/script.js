@@ -36,7 +36,7 @@ let countDown = new Date('May 4, 2022 09:30:00').getTime(),
 
 
 
-
+// effect text animation 
   anime.timeline({loop: true})
   .add({
     targets: '.ml5 .line',
