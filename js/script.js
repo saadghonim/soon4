@@ -37,14 +37,15 @@ let countDown = new Date('oct 22, 2021 09:30:00').getTime(),
 
 
 // effect text animation 
-  anime.timeline({loop: true})
+  anime.timeline({loop: false})
   .add({
     targets: '.ml5 .line',
     opacity: [0.5,1],
     scaleX: [0, 1],
     easing: "easeInOutExpo",
     duration: 700
-  }).add({
+  })
+  .add({
     targets: '.ml5 .line',
     duration: 600,
     easing: "easeOutExpo",
@@ -72,7 +73,7 @@ let countDown = new Date('oct 22, 2021 09:30:00').getTime(),
     offset: '-=600'
   }).add({
     targets: '.ml5',
-    opacity: 0,
+    opacity: 1,
     duration: 1000,
     easing: "easeOutExpo",
     delay: 1000
