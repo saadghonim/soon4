@@ -206,7 +206,7 @@ body{
 .ml5 .line {
   position: absolute;
   left: 0;
-  top: 3px;
+  top: 1px;
   bottom: 0;
   margin: auto;
   height: 3px;
