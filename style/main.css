@@ -104,7 +104,9 @@ body{
   font-family: "Tajawal";
   font-weight: 500;
   font-size: 20px;
-  
+  background: -webkit-linear-gradient(#fe7c00, #e72b37, #00295a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 
@@ -141,6 +143,7 @@ body{
   width:100%; 
   margin:0;
   overflow:hidden;
+
 }
 
 .sm{
@@ -153,14 +156,14 @@ body{
   width: 50px;
   height: 50px;
   text-align: center;
-  color: #000000;
+  color: #3f3f3f;
   margin: 0 ;
   transition: .4s linear;
   position: relative;
 }
 
 .sm a:hover{
-  color: #fe0000;
+  color: #fe7c00
 
 }
 
