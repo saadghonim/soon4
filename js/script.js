@@ -46,7 +46,7 @@ let countDown = new Date('nov 01, 2021 01:00:00').getTime(),
     targets: '.ml5 .line',
     duration: 600,
     easing: "easeOutExpo",
-    translateY: (el, i) => (-0.625 + 0.625*2*i) + "em"
+    translateY: (el, i) => (-0.650 + 0.650*2*i) + "em"
   }).add({
     targets: '.ml5 .ampersand',
     opacity: [0,1],
