@@ -132,6 +132,9 @@ body{
   .num{
     font-size: 40px;
   }
+  .position_div{
+    top: 50%;
+  }
 }
 
 
