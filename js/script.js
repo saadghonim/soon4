@@ -1,7 +1,4 @@
 
-
-
-
 /*~~~~~~~~~~~~~~~~~~conuter~~~~~~~~~~~~~~~~~~ */
 var secs = document.getElementById("seconds");
 var mins = document.getElementById("minutes");
