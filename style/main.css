@@ -65,32 +65,30 @@ body{
   overflow: hidden;
 }
 
-
-.position_div{
-  position: absolute;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  top: 45%;
-  left: 50%;
+.parant_{
+  background-image: url("../images/1.png");
+  background-size: cover;
+  height: 100vh;
 }
-.logo{
+
+.grid-item {
   text-align: center;
 }
-
+.grid-item img{
+  width: 200px;
+  padding: 50px 0;
+}
 
 .content {
   display: flex;
   justify-content: center;
-  padding: 40px 0;
+  padding: 40px 0 70px;
 }
 
 .item {
   text-align: center;
   padding:0 30px;
-  color: #3f3f3f;
+  color: #3a4348;
   width: 145px;
 }
 
@@ -104,7 +102,7 @@ body{
   font-family: "Tajawal";
   font-weight: 500;
   font-size: 20px;
-  color: #e72b37;
+  color: #4a7dbf;
 }
 
 
@@ -130,12 +128,9 @@ body{
   .num{
     font-size: 40px;
   }
-  .position_div{
-    top: 50%;
-  }
+
 }
 
-@import url(https://fonts.googleapis.com/css?family=Tangerine);
 body{
   width:100%; 
   margin:0;
@@ -153,14 +148,14 @@ body{
   width: 50px;
   height: 50px;
   text-align: center;
-  color: #3f3f3f;
+  color: #3a4348;
   margin: 0 ;
   transition: .4s linear;
   position: relative;
 }
 
 .sm a:hover{
-  color: #fe7c00
+  color: #4a7dbf
 
 }
 
@@ -189,7 +184,6 @@ body{
   text-transform:uppercase;
   font-family:"Tajawal";
   font-weight: 500;
-  margin-bottom: 100px;
 }
 
 
@@ -201,6 +195,8 @@ body{
   padding-right: 0.05em;
   padding-bottom: 0.8em;
   line-height: 1em;
+  color: #4a4a4a;
+  font-weight: 500;
 }
 
 .ml5 .line {
