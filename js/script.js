@@ -70,3 +70,5 @@ let countDown = new Date('january 01, 2022 01:00:00').getTime(),
     easing: "easeOutExpo",
     delay: 1000
   });
+
+

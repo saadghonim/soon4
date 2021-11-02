@@ -62,27 +62,109 @@
 }
 
 body{
-  overflow: hidden;
+  width:100%; 
+  margin:0;
+  overflow:hidden;
+
 }
+
 
 .parant_{
-  background-image: url("../images/1.png");
-  background-size: cover;
+  /* background-image: url("../images/Unddtitled-1.jpg"); */
+  position: relative;
   height: 100vh;
 }
+/*  ~~~~~~~~~~~~~~~~~~~~ clip path~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+.parant_::after{
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+background-color:  rgb(56, 67, 71);
+opacity: .9;
+z-index: -1;
+}
+.clip_{
+  position: absolute;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  right: 0;
+  top: 50%;
+  background-color: rgb(42, 132, 242);
+  width: 80px;
+  height: 460px;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  z-index: 10;
+
+}
+.parant_::before{
+  content: "";
+  position: absolute;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  left: 0;
+  top: 50%;
+  background-color: rgb(42, 132, 242);
+  width: 80px;
+  height: 460px;
+  clip-path: polygon(100% 0, 0 0, 0 97%);
+}
+.clip_top{
+  position: absolute;
+  width: 770px;
+  height: 450px;
+  background-color: rgb(56, 67, 71);
+  top: 0;
+  right: 0;
+  clip-path: polygon(100% 0, 0 0, 100% 61%);
+
+}
+.clip_bottom{
+  position: absolute;
+  width: 900px;
+  height: 450px;
+  background-color: rgb(56, 67, 71);
+  right: 0;
+  bottom: 0;
+  clip-path: polygon(100% 32%, 28% 100%, 100% 100%);
+
+}
+
+/*  ~~~~~~~~~~~~~~~~~~~~ clip path~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.back_{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.soongrid_{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
 .grid-item {
   text-align: center;
 }
 .grid-item img{
-  width: 200px;
-  padding: 50px 0;
+  margin-bottom: 40px;
 }
 
 .content {
   display: flex;
   justify-content: center;
-  padding: 40px 0 70px;
+  padding: 70px 0 70px;
 }
 
 .item {
@@ -91,30 +173,104 @@ body{
   color: #4a7dbf;
   width: 145px;
 }
-
 .num {
+  font-size: 90px;
   font-family: "Tajawal";
-  font-size: 70px;
-  font-weight: 600;
+  color: rgb(255, 255, 255);
+  font-weight: 200;
 }
 
 .counter {
-  font-family: "Tajawal";
-  font-weight: 500;
   font-size: 20px;
-  color: #3a4348;
+  font-family: "Tajawal";
+  color: rgb(255, 255, 255);
+  font-weight: 700;
 }
 
 
+/* ~~~~~~~~~~~~~~ text ~~~~~~~~~~~~~~~~ */
+
+.text_ h6{
+  font-size: 35px;
+  font-family: "Tajawal";
+  color: rgb(255, 255, 255);
+  margin: 0;
+  font-weight: 700;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~social media~~~~~~~~~~~~~~~~~~~~ */
+
+
+.social-media a{
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.502);
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+}
+.social-media a:not(.social-media a:last-child){
+  margin-inline-end: 40px;
+}
+.social-media a:hover{
+  color: rgb(255, 255, 255);
+
+}
+
+
+@media(max-width:1400px){
+  .clip_, .parant_::before{
+    width: 70px;
+    height: 279px;
+  }
+  .clip_top, .clip_bottom{
+    width: 450px;
+    height: 374px;
+  }
+  .content {
+    padding: 50px 0 60px;
+    
+  }
+}
+@media(max-width:992px){
+  .clip_, .parant_::before ,.clip_top, .clip_bottom{
+    display: none;
+  }
+  .grid-item img {
+    width: 250px;
+    
+  }
+  .text_ h6 {
+    font-size: 30px;
+  }
+  .content {
+    padding: 40px 0 30px;
+
+  }
+}
 @media (max-width: 567px) {
+  .grid-item img{
+    width: 225px;
+  }
+  .text_ h6 {
+    font-size: 24px;
+  }
+  .num {
+    font-size: 50px;
+  
+  }
+  .counter{
+    font-size: 14px;
+    padding: 40px 0 80px;
+  }
+  
   .container {
     width: 100%;
     height: auto;
     padding-top: 0;
   }
-  .counter{
-    font-size: 20px;
-  }
+
   .content {
     justify-content: space-between;
     align-items: center;
@@ -125,103 +281,8 @@ body{
     width: 85px;
     
   }
-  .num{
-    font-size: 40px;
+  .social-media a:not(.social-media a:last-child){
+    margin-inline-end: 30px;
   }
 
-}
-
-body{
-  width:100%; 
-  margin:0;
-  overflow:hidden;
-
-}
-
-.sm{
-  text-align: center;
-}
-
-.sm a{
-  display: inline-block;
-  font-size: 25px;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  color: #3a4348;
-  margin: 0 ;
-  transition: .4s linear;
-  position: relative;
-}
-
-.sm a:hover{
-  color: #4a7dbf
-
-}
-
-.sm a:hover::before{
-  border-left: 4px solid;
-  border-right: 4px solid;
-  transform: skewX(20deg);
-}
-
-.sm a:hover::after{
-  border-top: 4px solid;
-  border-bottom: 4px solid;
-  transform: skewY(-20deg);
-}
-
-
-
-
-.text-anim .ml5{
-  margin: 0;
-  position: relative;
-  text-align:center;
-  font-size:30px;
-  line-height:70px;
-  color:#4a4a4a;
-  text-transform:uppercase;
-  font-family:"Tajawal";
-  font-weight: 500;
-}
-
-
-
-.ml5 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  padding-top: 1em;
-  padding-right: 0.05em;
-  padding-bottom: 0.8em;
-  line-height: 1em;
-  color: #4a4a4a;
-  font-weight: 500;
-}
-
-.ml5 .line {
-  position: absolute;
-  left: 0;
-  top: -4px;
-  bottom: 0;
-  margin: auto;
-  height: 3px;
-  width: 100%;
-  background-color: #402d2d;
-  transform-origin: 0.5 0;
-  display: none;
-}
-
-.ml5 .ampersand {
-  font-family: Baskerville, serif;
-  font-style: italic;
-  font-weight: 400;
-  width: 1em;
-  margin-right: -0.1em;
-  margin-left: -0.1em;
-}
-
-.ml5 .letters {
-  display: inline-block;
-  opacity: 0;
 }
