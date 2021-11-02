@@ -262,9 +262,11 @@ z-index: -1;
   }
   .counter{
     font-size: 14px;
-    padding: 40px 0 80px;
   }
-  
+  .content {
+    padding: 40px 0 80px;
+
+  }
   .container {
     width: 100%;
     height: auto;
