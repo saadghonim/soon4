@@ -70,9 +70,11 @@ body{
 
 
 .parant_{
-  /* background-image: url("../images/Unddtitled-1.jpg"); */
   position: relative;
   height: 100vh;
+  background-image: url("../images/11.jpg");
+  background-size: cover;
+  opacity: .9;
 }
 /*  ~~~~~~~~~~~~~~~~~~~~ clip path~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -147,6 +149,8 @@ z-index: -1;
   height: 100%;
   width: 100%;
   z-index: -1;
+  max-width: 100%;
+  height: 100%;
 }
 .soongrid_{
   display: flex;
@@ -286,5 +290,8 @@ z-index: -1;
   .social-media a:not(.social-media a:last-child){
     margin-inline-end: 30px;
   }
+  .parant_{
+    background-position: right -525PX top 0;
 
+  }
 }
